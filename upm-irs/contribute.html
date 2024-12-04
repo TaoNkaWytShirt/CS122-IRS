@@ -3,49 +3,453 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contribute - UPM Repository</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Home Care Program Enrollment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas:
+                "Header"
+                "Content";
+            min-height: 100vh;
+            background-color: #eaeaea;
+        }
+
+        header {
+            display: flex;
+            grid-area: Header;
+            background-color: #00573F;
+            padding: 3px 35px;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-content img {
+            width: 100px;
+            height: 55px;
+            object-fit: contain;
+            margin: 0px 30px;
+        }
+
+        .header-content h1 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fcfcfc;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .material-icons {
+            color: #fcfcfc;
+            margin: 0px 20px;
+            border: 1px solid transparent;
+        }
+
+        .material-icons:hover {
+            cursor: pointer;
+        }
+
+        .material-icons.active {
+            border: 1px solid #fcfcfc;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            z-index: 1;
+            border-radius: 5px;
+            right: 55px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 150px;
+            top: 48px;
+            padding: 10px 0px;
+        }
+
+        .dropdown-content a {
+            font-size: 14px;
+            color: black;
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .content-container {
+            grid-area: Content;
+            position: fixed;
+            margin-top: 90px;
+            height: 100%;
+            width: 100%;
+            background-color: #eaeaea;
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .content {
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            width: 50%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 7px;
+            margin-bottom: 150px;
+            overflow-y: auto;
+        }
+
+        input:not(.name input, .date input), select {
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        textarea {
+            display: flex;
+            height: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            resize: none;
+        }
+
+        .details,
+        .title,
+        .content-type,
+        .keywords,
+        .access-level,
+        .abstract {
+            margin-bottom: 10px;
+        }
+
+        .details div,
+        .title div,
+        .content-type div,
+        .keywords div,
+        .access-level div,
+        .abstract div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        label  {
+            margin-bottom: 5px;
+            margin-left: 3px;
+        }
+
+        .name, .unit, .date {
+            display: flex;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        .name div, .unit div, .date div {
+            display: flex;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .name input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 30px;
+            border: solid #ccc;
+            border-width: 1px 0px 1px 1px;
+            padding: 5px;
+        }
+
+        .name input:nth-child(1), .date input:nth-child(1){
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        .delete-row-btn {
+            width: 160px; /* Set button width to 70px */
+            height: 30px; /* Match input height */
+            border: none;
+            border-radius: 0px 5px 5px 0px;
+            background-color: #981610;
+            color: white;
+            box-sizing: border-box; /* Ensure padding/border don't affect width */
+            text-align: center;
+            line-height: 30px; /* Vertically align the minus symbol */
+            cursor: pointer;
+        }
+
+        .organization {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .organization label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .add-row-btn {
+            width: 37px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #f4c430;
+            border: none;
+            cursor: pointer;
+        }
+
+        .unit {
+            display: flex;
+            vertical-align: middle;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .unit div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .date input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 30px;
+            border: solid #ccc;
+            padding: 5px;
+        }
+
+        .date input:nth-child(1), input:nth-child(2) {
+            border-width: 1px 0px 1px 1px;
+        }
+
+        .date input:nth-child(3){
+            border-width: 1px;
+            border-radius: 0px 5px 5px 0px;
+        }
+
+        .embargo-duration {
+            display: flex;
+            vertical-align: middle;
+            gap: 10px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+
+        .embargo-duration input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 30px;
+            border: solid #ccc;
+            padding: 5px;
+        }
+
+    </style>
 </head>
 <body>
-    <header>
+<header>
+    <div class="header-content">
+        <img src="irs-with-logo.png" alt="Logo"> <!-- Placeholder for PNG -->
         <nav>
-            <a href="index.html">
-                <img src="assets/irs-logo.png" alt="UPM Logo" class="nav-logo">
-            </a>
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="policies.html">Policies</a>
-            <div class="login">
-                <a href="login.html">Login</a>
-            </div>
         </nav>
-    </header>
+    </div>
 
-    <main>
-        <h1>Contribute Content</h1>
-        <form>
-            <label for="title">Title</label>
-            <input type="text" id="title" required>
+    <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+            <a href="#">Settings</a>
+            <a href="#">Account</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+</header>
 
-            <label for="type">Content Type</label>
-            <select id="type" required>
-                <option>Research</option>
-                <option>Thesis</option>
-                <option>Journal Article</option>
+<div class="content-container">
+    <div class="content">
+        <div class="details">
+            <div>
+                <label>Add Details</label>
+            </div>
+        </div>
+        <div class="title">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+        </div>
+        <div class="content-type">
+            <div>
+                <label for="content_type">Content Type</label>
+                <select id="content_type" name="content_type" required>
+                    <option value="">---------</option>
+                    <option value="Undergraduate Thesis">Undergraduate Thesis</option>
+                    <option value="University Images">University Images</option>
+                    <option value="Faculty and Staff Research Output">Faculty and Staff Research Output</option>
+                    <option value="Graduate Thesis">Graduate Thesis</option>
+                    <option value="Doctoral Dissertation">Doctoral Dissertation</option>
+                    <option value="Book">Book</option>
+                    <option value="Newsletter">Newsletter</option>
+                    <option value="Journal">Journal</option>
+                </select>
+            </div>
+        </div>
+
+        <label>Authors</label>
+        <div class="authors">
+            <div class="name">
+                <input type="text" id="first_name" name="first_name" required>
+                <input type="text" id="middle_name" name="middle_name" required>
+                <input type="text" id="last_name" name="last_name" required>
+                <input type="text" id="up_mail" name="up_mail" required>
+                <button class="delete-row-btn" type="button">—</button></td>
+            </div>
+        </div>
+
+        <div class="organization">
+            <div>
+                <label><input type="checkbox" name="organization" value="organization">Organization</label>
+            </div>
+            <div>
+                <button class="add-row-btn" type="button">+</button></td>
+            </div>
+        </div>
+
+        <div class="unit">
+            <div>
+                <label for="unit">Unit</label>
+                <select id="unit" name="unit" required>
+                    <option value="">---------</option>
+                    <option value="College of Arts and Sciences">College of Arts and Sciences</option>
+                    <option value="College of Medicine">College of Medicine</option>
+                    <option value="College of Allied Medical Professions">College of Allied Medical Professions</option>
+                    <option value="College of Dentistry">College of Dentistry</option>
+                    <option value="College of Nursing">College of Nursing</option>
+                    <option value="College of Pharmacy">College of Pharmacy</option>
+                    <option value="College of Public Health">College of Public Health</option>
+                    <option value="School of Health Sciences Palo">School of Health Sciences Palo</option>
+                    <option value="University Library">University Library</option>
+                </select>
+            </div>
+            <div>
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="">---------</option>
+                </select>
+            </div>
+        </div>
+
+        <label for="year">Date</label>
+        <div class="date">
+            <div>
+                <input type="text" id="year" name="year" placeholder="YYYY" maxlength="4" pattern="\d{4}" title="Enter a 4-digit year">
+                <input type="text" id="month" name="month" placeholder="MM" maxlength="2" pattern="(0[1-9]|1[0-2])" title="Enter a valid month (01-12)">
+                <input type="text" id="day" name="day" placeholder="DD" maxlength="2" pattern="(0[1-9]|[12][0-9]|3[01])" title="Enter a valid day (01-31)">
+            </div>
+        </div>
+        <div class="abstract">
+            <div>
+                <label for="abstract">Abstract:</label>
+                <textarea id="abstract" name="abstract" rows="4" required></textarea>
+            </div>
+        </div>
+        <div class="keywords">
+            <div>
+                <label for="keywords">Keywords</label>
+                <input type="text" id="keywords" name="keywords" required>
+            </div>
+        </div>
+        <div class="access-level">
+            <div>
+                <label for="access_level">Access Level</label>
+                <select id="access_level" name="access_level" required>
+                    <option value="Public">Public</option>
+                    <option value="University">University</option>
+                    <option value="Restricted">Restricted</option>
+                </select>
+            </div>
+        </div>
+
+        <label>Embargo Duration</label>
+        <div class="embargo-duration">
+            <input type="text" id="embargo_duration" name="embargo_duration" required>
+            <select name="embargo_duration" required>
+                <option value="Public">Days</option>
+                <option value="University">Month</option>
             </select>
+        </div>
 
-            <label for="authors">Authors</label>
-            <input type="text" id="authors" required>
 
-            <label for="unit">Unit</label>
-            <input type="text" id="unit" required>
+    </div>
+</div>
 
-            <label for="abstract">Abstract</label>
-            <textarea id="abstract" required></textarea>
+<script>
+    function toggleDropdown() {
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      const icon = document.querySelector(".material-icons");
 
-            <button type="submit">Upload</button>
-            <button type="reset">Cancel</button>
-        </form>
-    </main>
+      // Toggle the dropdown visibility
+      if (dropdownMenu.style.display === "block") {
+        dropdownMenu.style.display = "none";
+        icon.classList.remove("active");
+      } else {
+        dropdownMenu.style.display = "block";
+        icon.classList.add("active");
+      }
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      const icon = document.querySelector(".material-icons");
+
+      if (!icon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = "none";
+        icon.classList.remove("active");
+      }
+    });
+
+</script>
 </body>
 </html>
