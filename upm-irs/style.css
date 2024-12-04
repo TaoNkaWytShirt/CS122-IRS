@@ -127,65 +127,117 @@ body {
     border-color: #7B1113;
 }
 
-.home-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding-top: 170px;    
-    padding-bottom: 100px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: #00411C;
-    border-top: 4px solid#f5c94a;
-    border-bottom: 4px solid#f5c94a;
+section.services {
+    padding: 20px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
-.home-buttons button {
-    background-color: white;
-    color: #00411C;
-    border: 3px solid #00411C;
-    border-radius: 8px;
-    padding-top: 10px;
-    padding-bottom: 90px;
-    font-size: 16px;
+.search-bar-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    min-width: 300px; 
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 500px; /* Limits the maximum size of the search bar */
+    min-width: 200px; /* Ensures it doesn’t shrink below this size */
+    margin-right: 22px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-button, .search-button {
+    width: 38px;
+    height: 38px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7B1113;
+    color: white;
+    cursor: pointer;
+}
+
+.search-button {
+    background-image: url('assets/search-button.png'); /* Path to your icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%; /* Resize icon to fit inside the button */
+    color: transparent; /* Hides any text content */
+}
+
+.filter-button {
+    background-image: url('assets/search-filter.png'); /* Path to your icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%; /* Resize icon to fit inside the button */
+    color: transparent; /* Hides any text content */
+}
+
+.filter-button:hover, .search-button:hover {
+    background-color: #560001;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* For responsiveness */
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.buttons button {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7B1113;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    width: auto;
-    max-width: 250px;
-    flex: 1;
-    font-weight: bold;
-    height: 220px;
+    width: 170px;
+    height: 180px;
+    text-align: center;
+    gap: 10px; /* Space between icon and text */
     font-size: 16px;
 }
 
-.home-buttons button:hover {
-    background-color: #dadada;
-    border: 3px solid #002d13;
-    transform: scale(1.05);
+.buttons button:hover {
+    background-color: #560001;
 }
 
-.home-buttons button img {
-    width: 20px;
-    height: 20px;
+.buttons button img {
+    width: 90px; /* Adjust size of the icon */
+    height: 90px; /* Adjust size of the icon */
+    object-fit: contain; /* Ensures the image scales correctly */
+    pointer-events: none; /* Prevents hover effects on icons */
 }
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .home-buttons button {
-        font-size: 14px;
-        padding: 10px 20px;
-        max-width: 200px;
+    .search-bar-container {
+        flex-direction: row;
     }
-}
 
-@media (max-width: 480px) {
-    .home-buttons button {
-        font-size: 12px;
-        padding: 8px 15px;
-        max-width: 150px;
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
     }
 }
