@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute - UPM Repository</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="assets/irs-logo.png" alt="UPM Logo" class="nav-logo">
+            </a>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="policies.html">Policies</a>
+            <div class="login">
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contribute Content</h1>
+        <form>
+            <label for="title">Title</label>
+            <input type="text" id="title" required>
+
+            <label for="type">Content Type</label>
+            <select id="type" required>
+                <option>Research</option>
+                <option>Thesis</option>
+                <option>Journal Article</option>
+            </select>
+
+            <label for="authors">Authors</label>
+            <input type="text" id="authors" required>
+
+            <label for="unit">Unit</label>
+            <input type="text" id="unit" required>
+
+            <label for="abstract">Abstract</label>
+            <textarea id="abstract" required></textarea>
+
+            <button type="submit">Upload</button>
+            <button type="reset">Cancel</button>
+        </form>
+    </main>
+</body>
+</html>

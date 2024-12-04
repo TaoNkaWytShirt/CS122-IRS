@@ -1,0 +1,191 @@
+header {
+    background-color: #7B1113; /* Deep green background */
+    padding: 0; /* Reduced padding for thinner appearance */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.nav-logo {
+    height: 35px; /* Slightly reduced logo size for a thinner navbar */
+    width: auto; /* Maintain the aspect ratio */
+    vertical-align: middle; /* Aligns the image with the navbar links */
+    margin-right: 10px; /* Adds spacing between the logo and the "Home" button */
+    pointer-events: none; /* Prevents hover effects on the logo */
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.765);
+    text-decoration: none;
+    font-size: 15px; /* Slightly smaller font size for a compact appearance */
+    margin: 0;
+    padding: 5px 10px; /* Reduced padding for thinner nav items */
+    display: inline-block; /* Ensures padding applies to the whole area */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+nav a:hover {
+    color: #f5c94a;
+}
+
+nav a.active {
+    background-color: #f5c94a; /* Highlighted background for the active link */
+    color: #7B1113; /* Contrast text color */
+    font-weight: bold; /* Optional: Make the text bold */
+    border-top: 5px solid #f5c94a; /* Top border in the same highlight color */
+    border-bottom: 5px solid #f5c94a; /* Bottom border in the same highlight color */
+    box-shadow: 0 3px 0 #f5c94a, 0 -3px 0 #f5c94a; /* Optional: Adds a shadow for more prominence */
+    padding: 5px 10px; /* Adjust padding to accommodate border size */
+    transition: .3s;
+}
+
+.login {
+    margin-left: auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.welcome {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.upm.edu.ph/wp-content/themes/University%20of%20the%20Philippines%20Manila/images/home/carousel_images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.parallax-background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 220px 20px;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+#btnLearnMore {
+    background-color: #7B1113;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 1em;
+    color: #f5c94a;
+    border: 2px solid #f5c94a;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#btnLearnMore:hover{
+    background-color: white;
+    color: #7B1113;
+    border-color: #7B1113;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 170px;    
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #00411C;
+    border-top: 4px solid#f5c94a;
+    border-bottom: 4px solid#f5c94a;
+}
+
+.home-buttons button {
+    background-color: white;
+    color: #00411C;
+    border: 3px solid #00411C;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 90px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: auto;
+    max-width: 250px;
+    flex: 1;
+    font-weight: bold;
+    height: 220px;
+    font-size: 16px;
+}
+
+.home-buttons button:hover {
+    background-color: #dadada;
+    border: 3px solid #002d13;
+    transform: scale(1.05);
+}
+
+.home-buttons button img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .home-buttons button {
+        font-size: 14px;
+        padding: 10px 20px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-buttons button {
+        font-size: 12px;
+        padding: 8px 15px;
+        max-width: 150px;
+    }
+}
