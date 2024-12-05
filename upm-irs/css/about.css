@@ -1,0 +1,95 @@
+.content-container {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.hero-section {
+    position: relative;
+    height: 400px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/placeholder-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-text {
+    padding: 40px;
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.key-features {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.key-features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 600;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.feature-item {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.feature-item h3 {
+    color: #00573f;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .about-text {
+        padding: 20px;
+    }
+    
+    .key-features {
+        padding: 20px;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
