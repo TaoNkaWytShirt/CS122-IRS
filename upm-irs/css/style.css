@@ -122,7 +122,6 @@ nav a:hover {
   padding: 10px;
   border-radius: 7px;
   margin-bottom: 150px;
-  overflow-y: auto;
 }
 
 /**
@@ -524,4 +523,4 @@ section.services {
     }
 }
 
-**/ 
+**/

@@ -1,0 +1,92 @@
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+  margin: auto;
+}
+
+.content {
+  margin: auto;
+}
+
+.login-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
+}
+
+.irs-logo {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  border-radius: 7px;
+  /*border: 1px solid blue;*/
+}
+
+.irs-logo img {
+  /*border: 1px solid red;*/
+  height: 120px;
+  margin: auto;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form input:focus {
+  border-color: #00573f;
+  outline: none;
+}
+
+.sign-in-btn {
+  background: #00573f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-btn:hover {
+  background: #45a049;
+}
+
+.account-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-options p {
+  margin-top: 10px;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.google-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.google-signin img {
+  height: 20px;
+  margin-right: 10px;
+}
