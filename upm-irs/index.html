@@ -198,8 +198,8 @@
 
       .recent-submissions{
         background-color: #00573f;
-        border-top: 4px solid #f5c94a;
-        border-bottom: 4px solid #f5c94a;
+        border-top: 3px solid #f5c94a;
+        border-bottom: 3px solid #f5c94a;
         padding-top: 50px;
         padding-bottom: 50px;
         padding-right: 10px;
@@ -218,28 +218,27 @@
     }
 
     .entry {
-      border-bottom: 1px solid white;
-      margin-bottom: 15px;
+      border-bottom: 1px solid #003b2b;
     }
 
     .entry-title {
       width: 100%;
       background: none;
-      color: white;
+      color: #003b2b;
       font-weight: bold;
       text-align: left;
       padding: 10px;
       border: none;
-      background-color: #00573f;
+      background-color: white;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
 
     .entry-title:hover{
-      background-color: #003b2b;
+      background-color: #ccc;
     }
 
     .entry-details {
@@ -274,25 +273,43 @@
     }
 
     .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
 
-    .pagination button {
-      background-color: #f5c94a;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      color: #00573f;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+.pagination button,
+.pagination .current-page {
+  background: white;
+  border-bottom: 1px solid #003b2b;
+  border-top: 1px solid #003b2b;
+  border-left: 1px solid #003b2b;
+  border-right: 0.5px solid #003b2b;
+  color: #003b2b;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    .pagination button:hover {
-      background-color: #e0b946;
-    }
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination .current-page {
+  font-weight: bold;
+  width: 32px; 
+  text-align: center;
+  background-color: #f5c94a;
+  color: #003b2b;
+}
+
+.pagination button:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+}
+
 
     /* Responsive */
     @media (max-width: 600px) {
@@ -503,6 +520,7 @@
       <section class="recent-submissions">
         <div class="entries-container">
             <h2>Recent Contributions</h2>
+            <div class="entry-list">
             <div class="entry">
               <button class="entry-title">
                   SAMPLE ENTRY TITLE 1
@@ -555,11 +573,16 @@
                     <button class="view-more">View More</button>
                 </div>
             </div>
+          </div>
         </div>
         <div class="pagination">
-            <button class="prev-page">Previous</button>
-            <button class="next-page">Next</button>
+          <button class="first-page">&laquo;</button> 
+          <button class="prev-page">&lt;</button> 
+          <span class="current-page">1</span> 
+          <button class="next-page">&gt;</button> 
+          <button class="last-page">&raquo;</button> 
         </div>
+        
     </section>
     
 
