@@ -212,8 +212,6 @@
         margin-bottom: 30px;
      }
 
-  
-
     .entries-container {
       max-width: 700px;
       margin: 0 auto;
@@ -275,25 +273,43 @@
     }
 
     .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
 
-    .pagination button {
-      background-color: #f5c94a;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      color: #00573f;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+.pagination button,
+.pagination .current-page {
+  background: white;
+  border-bottom: 1px solid #003b2b;
+  border-top: 1px solid #003b2b;
+  border-left: 1px solid #003b2b;
+  border-right: 0.5px solid #003b2b;
+  color: #003b2b;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    .pagination button:hover {
-      background-color: #e0b946;
-    }
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination .current-page {
+  font-weight: bold;
+  width: 32px; 
+  text-align: center;
+  background-color: #f5c94a;
+  color: #003b2b;
+}
+
+.pagination button:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+}
+
 
     /* Responsive */
     @media (max-width: 600px) {
@@ -560,9 +576,13 @@
           </div>
         </div>
         <div class="pagination">
-            <button class="prev-page">Previous</button>
-            <button class="next-page">Next</button>
+          <button class="first-page">&laquo;</button> 
+          <button class="prev-page">&lt;</button> 
+          <span class="current-page">1</span> 
+          <button class="next-page">&gt;</button> 
+          <button class="last-page">&raquo;</button> 
         </div>
+        
     </section>
     
 
