@@ -212,34 +212,35 @@
         margin-bottom: 30px;
      }
 
+  
+
     .entries-container {
       max-width: 700px;
       margin: 0 auto;
     }
 
     .entry {
-      border-bottom: 1px solid white;
-      margin-bottom: 15px;
+      border-bottom: 1px solid #003b2b;
     }
 
     .entry-title {
       width: 100%;
       background: none;
-      color: white;
+      color: #003b2b;
       font-weight: bold;
       text-align: left;
       padding: 10px;
       border: none;
-      background-color: #00573f;
+      background-color: white;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
 
     .entry-title:hover{
-      background-color: #003b2b;
+      background-color: #ccc;
     }
 
     .entry-details {
@@ -503,6 +504,7 @@
       <section class="recent-submissions">
         <div class="entries-container">
             <h2>Recent Contributions</h2>
+            <div class="entry-list">
             <div class="entry">
               <button class="entry-title">
                   SAMPLE ENTRY TITLE 1
@@ -555,6 +557,7 @@
                     <button class="view-more">View More</button>
                 </div>
             </div>
+          </div>
         </div>
         <div class="pagination">
             <button class="prev-page">Previous</button>
