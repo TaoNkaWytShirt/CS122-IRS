@@ -70,3 +70,55 @@ document.addEventListener("click", (event) => {
     icon.classList.remove("active");
   }
 });
+
+// Open the filter modal
+function openModal() {
+    document.getElementById("filterModal").style.display = "block";
+  }
+  
+  // Close the filter modal
+  function closeModal() {
+    document.getElementById("filterModal").style.display = "none";
+  }
+  
+  // Apply the filters (for now, just logs the selected values)
+  function applyFilters() {
+    const accessLevel = document.getElementById("accessLevel").value;
+    const content = document.getElementById("content").value;
+    const college = document.getElementById("college").value;
+    const department = document.getElementById("department").value;
+  
+    console.log("Filters Applied:");
+    console.log("Access Level:", accessLevel);
+    console.log("Content:", content);
+    console.log("College:", college);
+    console.log("Department:", department);
+  
+    closeModal();
+  }
+  
+  // Update department options based on selected college
+  function updateDepartments() {
+    const college = document.getElementById("college").value;
+    const departmentSelect = document.getElementById("department");
+    departmentSelect.innerHTML = ""; // Clear existing options
+  
+    let departments = [];
+    if (college === "arts_sciences") {
+      departments = ["Department of Psychology", "Department of Sociology", "Department of Literature"];
+    } else if (college === "nursing") {
+      departments = ["Department of Nursing Practice", "Department of Nursing Research"];
+    }
+  
+    // Populate department select
+    departments.forEach(department => {
+      const option = document.createElement("option");
+      option.value = department;
+      option.textContent = department;
+      departmentSelect.appendChild(option);
+    });
+  }
+  
+  // Trigger filter modal on button click
+  document.getElementById("btnFilter").addEventListener("click", openModal);
+  

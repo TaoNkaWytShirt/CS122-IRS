@@ -1,0 +1,501 @@
+.welcome {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.upm.edu.ph/wp-content/themes/University%20of%20the%20Philippines%20Manila/images/home/carousel_images/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+
+  .parallax-background:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 220px 20px;
+  }
+
+  .content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+  #btnLearnMore {
+    background-color: #00573f;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 1em;
+    color: #f5c94a;
+    border: 2px solid #f5c94a;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  #btnLearnMore:hover {
+    background-color: #003b2b;
+  }
+
+  section.services {
+    padding: 20px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-width: 300px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .search-bar {
+    flex: 1;
+    max-width: 500px; /* Limits the maximum size of the search bar */
+    min-width: 200px; /* Ensures it doesn’t shrink below this size */
+    margin-right: 22px;
+  }
+
+  .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .filter-button,
+  .search-button {
+    width: 38px;
+    height: 38px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00573f;
+    color: white;
+    cursor: pointer;
+  }
+
+  .search-button {
+    background-image: url("../assets/search-button.png"); /* Path to your icon*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%; /* Resize icon to fit inside the button*/
+    color: transparent; /* Hides any text content*/
+  }
+
+  .filter-button {
+    background-image: url("../assets/search-filter.png"); /* Path to your icon*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%; /* Resize icon to fit inside the button*/
+    color: transparent; /* Hides any text content*/
+  }
+
+  .filter-button:hover,
+  .search-button:hover {
+    background-color: #003b2b;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* For responsiveness*/
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .buttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00573f;
+    color: #f5c94a;
+    font-weight: bold;
+    cursor: pointer;
+    width: 170px;
+    height: 180px;
+    text-align: center;
+    gap: 10px; /* Space between icon and text*/
+    font-size: 16px;
+  }
+
+  .buttons button:hover {
+    background-color: #003b2b;
+  }
+
+  .buttons button img {
+    width: 90px; /* Adjust size of the icon*/
+    height: 90px; /* Adjust size of the icon*/
+    object-fit: contain; /* Ensures the image scales correctly*/
+    pointer-events: none; /* Prevents hover effects on icons*/
+  }
+  /* Responsive Design*/
+  @media (max-width: 768px) {
+    .search-bar-container {
+      flex-direction: row;
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .recent-submissions{
+    background-color: #00573f;
+    border-top: 3px solid #f5c94a;
+    border-bottom: 3px solid #f5c94a;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    color: #f5c94a;
+  }
+
+.recent-submissions h2 {
+    margin-bottom: 30px;
+ }
+
+.entries-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.entry {
+  border-bottom: 1px solid #003b2b;
+}
+
+.entry-title {
+  width: 100%;
+  background: none;
+  color: #003b2b;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.entry-title:hover{
+  background-color: #ccc;
+}
+
+.entry-details {
+  display: flex;
+  gap: 20px; 
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: left;
+  font-size: 13px;
+  align-items: center; /* Aligns the photo and info vertically */
+}
+
+
+.entry-info {
+flex: 1; /* The details box takes up twice as much space */
+max-width: 500px; /* Limit the width of the details box */
+}
+
+.view-more {
+  background-color: #f5c94a;
+  border: none;
+  padding: 5px 10px;
+  color: #00573f;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-more:hover {
+  background-color: #e0b946;
+}
+
+.pagination {
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 20px;
+}
+
+.pagination button,
+.pagination .current-page {
+background: white;
+border-bottom: 1px solid #003b2b;
+border-top: 1px solid #003b2b;
+border-left: 1px solid #003b2b;
+border-right: 0.5px solid #003b2b;
+color: #003b2b;
+padding: 8px 12px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.pagination button:hover {
+background-color: #ccc;
+}
+
+.pagination .current-page {
+width: 32px; 
+text-align: center;
+background-color: #f5c94a;
+color: #003b2b;
+}
+
+.pagination button:disabled {
+color: gray;
+border-color: gray;
+cursor: not-allowed;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .entry-title {
+    font-size: 14px;
+  }
+  .view-more {
+    font-size: 12px;
+  }
+}
+
+.announcements {
+  position: relative;
+  height: 500px; /* Adjust based on your preference */
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.announcements-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/university-library-building.jpeg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.announcements:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: 1;
+}
+
+.announcements-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  z-index: 1;
+}
+
+.announcements-content h2 {
+  margin-bottom: 20px;
+  color: #00573f;
+  font-weight: bold;
+  text-align: center;
+}
+
+.announcements-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+.announcements-content ul li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.contact {
+background-color: #f5c94a;
+padding-top: 30px;
+padding-bottom: 30px;
+padding-left: 20px;
+padding-right: 20px;
+
+}
+
+.contact h2 {
+text-align: center;
+padding-bottom: 15px;
+}
+
+.contact-content {
+display: flex; 
+justify-content: space-between; 
+align-items: flex-start; 
+gap: 10px; 
+}
+
+.contact-message {
+flex: 1; 
+max-width: 50%; 
+align-items: center;
+padding-top: 20px;
+padding-left: 20px;
+}
+
+.irs-location {
+flex: 1; 
+max-width: 45%; 
+}
+
+.irs-location iframe {
+width: 100%; 
+height: 300px; 
+border: 0;
+padding-right: 20px;
+}
+
+
+.footer {
+  background-color: #00573f;
+  color: white;
+  font-size: 14px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 15px;
+  padding-top: 5px;
+  text-align: center; 
+}
+
+.footer-text {
+margin: 0;
+}
+
+.footer-logo img {
+width: 100px; 
+margin-top: 10px; 
+}
+
+.modal {
+display: none; 
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.4);
+padding-top: 60px;
+}
+
+.modal-content {
+background-color: #fff;
+margin: 5% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 500px;
+border-radius: 5px;
+}
+
+.close-btn {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modal-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.modal-buttons button {
+background-color: #00573f;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.modal-buttons button:hover {
+background-color: #003b2b;
+}
+
+label {
+display: block;
+margin-top: 10px;
+font-weight: bold;
+}
+
+select {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
