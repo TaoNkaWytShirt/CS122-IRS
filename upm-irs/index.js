@@ -18,5 +18,30 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
-});
 
+    // Handle entry title toggling
+    const entries = document.querySelectorAll(".entry");
+
+    entries.forEach((entry) => {
+        const titleButton = entry.querySelector(".entry-title");
+        const details = entry.querySelector(".entry-details");
+        const dropdownIndicator = titleButton.querySelector(".dropdown-indicator");
+
+        titleButton.addEventListener("click", () => {
+            const isVisible = details.style.display === "block";
+            details.style.display = isVisible ? "none" : "block";
+
+            // Update the "+" to "-" and vice versa
+            dropdownIndicator.textContent = isVisible ? "＋" : "−";
+        });
+    });
+
+    // Handle view more buttons
+    const viewMoreButtons = document.querySelectorAll(".view-more");
+
+    viewMoreButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            alert(`Redirecting to page for Entry ${index + 1}`);
+        });
+    });
+});

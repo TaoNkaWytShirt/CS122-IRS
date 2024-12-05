@@ -40,7 +40,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.4);
         z-index: 1;
       }
 
@@ -63,7 +63,7 @@
       }
 
       #btnLearnMore {
-        background-color: #7b1113;
+        background-color: #00573f;
         margin-top: 15px;
         padding-top: 15px;
         padding-bottom: 15px;
@@ -77,9 +77,7 @@
       }
 
       #btnLearnMore:hover {
-        background-color: white;
-        color: #7b1113;
-        border-color: #7b1113;
+        background-color: #003b2b;
       }
 
       section.services {
@@ -121,7 +119,7 @@
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
-        background-color: #7b1113;
+        background-color: #00573f;
         color: white;
         cursor: pointer;
       }
@@ -144,7 +142,7 @@
 
       .filter-button:hover,
       .search-button:hover {
-        background-color: #560001;
+        background-color: #003b2b;
       }
 
       .buttons {
@@ -165,8 +163,9 @@
         padding: 10px;
         border: none;
         border-radius: 5px;
-        background-color: #7b1113;
-        color: white;
+        background-color: #00573f;
+        color: #f5c94a;
+        font-weight: bold;
         cursor: pointer;
         width: 170px;
         height: 180px;
@@ -176,7 +175,7 @@
       }
 
       .buttons button:hover {
-        background-color: #560001;
+        background-color: #003b2b;
       }
 
       .buttons button img {
@@ -196,6 +195,243 @@
           gap: 15px;
         }
       }
+
+      .recent-submissions{
+        background-color: #00573f;
+        border-top: 4px solid #f5c94a;
+        border-bottom: 4px solid #f5c94a;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+        text-align: center;
+        color: #f5c94a;
+      }
+
+    .recent-submissions h2 {
+        margin-bottom: 30px;
+     }
+
+    .entries-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .entry {
+      border-bottom: 1px solid white;
+      margin-bottom: 15px;
+    }
+
+    .entry-title {
+      width: 100%;
+      background: none;
+      color: white;
+      font-weight: bold;
+      text-align: left;
+      padding: 10px;
+      border: none;
+      background-color: #00573f;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+
+    .entry-title:hover{
+      background-color: #003b2b;
+    }
+
+    .entry-details {
+      display: flex;
+      gap: 20px; 
+      background-color: white;
+      color: black;
+      padding: 10px;
+      text-align: left;
+      font-size: 13px;
+      align-items: center; /* Aligns the photo and info vertically */
+  }
+
+
+.entry-info {
+    flex: 1; /* The details box takes up twice as much space */
+    max-width: 500px; /* Limit the width of the details box */
+}
+
+    .view-more {
+      background-color: #f5c94a;
+      border: none;
+      padding: 5px 10px;
+      color: #00573f;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .view-more:hover {
+      background-color: #e0b946;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .pagination button {
+      background-color: #f5c94a;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      color: #00573f;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .pagination button:hover {
+      background-color: #e0b946;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .entry-title {
+        font-size: 14px;
+      }
+      .view-more {
+        font-size: 12px;
+      }
+    }
+
+    .announcements {
+      position: relative;
+      height: 500px; /* Adjust based on your preference */
+      overflow: hidden;
+      padding-top: 100px;
+    }
+
+    .announcements-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/university-library-building.jpeg'); /* Path to your image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+
+    .announcements:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3); /* Adjust transparency here */
+      z-index: 1;
+    }
+
+    .announcements-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      z-index: 1;
+    }
+
+    .announcements-content h2 {
+      margin-bottom: 20px;
+      color: #00573f;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .announcements-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #333;
+    }
+
+    .announcements-content ul li {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .contact {
+    background-color: #f5c94a;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+
+.contact h2 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.contact-content {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  gap: 10px; 
+}
+
+.contact-message {
+  flex: 1; 
+  max-width: 50%; 
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.irs-location {
+  flex: 1; 
+  max-width: 45%; 
+}
+
+.irs-location iframe {
+  width: 100%; 
+  height: 300px; 
+  border: 0;
+  padding-right: 20px;
+}
+
+
+    .footer {
+      background-color: #00573f;
+      color: white;
+      font-size: 14px;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 15px;
+      padding-top: 5px;
+      text-align: center; 
+    }
+
+.footer-text {
+  margin: 0;
+}
+
+.footer-logo img {
+  width: 100px; /* Adjust the size as needed */
+  margin-top: 10px; /* Adds spacing between text and logo */
+}
+
+   
+
     </style>
   </head>
   <body>
@@ -265,65 +501,129 @@
       </section>
 
       <section class="recent-submissions">
-        <h2>Recent Submissions</h2>
-        <ul>
-          <li>
-            <strong>New Submission Guidelines</strong>: Please refer to the
-            updated submission rules on the Contribute Page.
-          </li>
-          <li>
-            <strong>System Maintenance</strong>: The repository will be down for
-            maintenance on December 10, 2024, from 10:00 AM to 2:00 PM.
-          </li>
-          <li>
-            <strong>New Research Materials</strong>: The repository has added
-            new research papers from the School of Medicine. Visit the
-            Contribute page for more details.
-          </li>
-        </ul>
-      </section>
+        <div class="entries-container">
+            <h2>Recent Contributions</h2>
+            <div class="entry">
+              <button class="entry-title">
+                  SAMPLE ENTRY TITLE 1
+                  <span class="dropdown-indicator">＋</span>
+              </button>
+              <div class="entry-details" style="display: none;">
+                  <p><strong>Author:</strong> John Smith</p>
+                  <p><strong>Date:</strong> December 3, 2024</p>
+                  <p><strong>Keywords:</strong> Keyword3, Keyword4</p>
+                  <p><strong>Abstract:</strong> Phasellus vestibulum lorem sed risus ultricies tristique.</p>
+                  <button class="view-more">View More</button>
+              </div>
+          </div>
+            <div class="entry">
+                <button class="entry-title">
+                    SAMPLE ENTRY TITLE 2
+                    <span class="dropdown-indicator">＋</span>
+                </button>
+                <div class="entry-details" style="display: none;">
+                    <p><strong>Author:</strong> John Smith</p>
+                    <p><strong>Date:</strong> December 3, 2024</p>
+                    <p><strong>Keywords:</strong> Keyword3, Keyword4</p>
+                    <p><strong>Abstract:</strong> Phasellus vestibulum lorem sed risus ultricies tristique.</p>
+                    <button class="view-more">View More</button>
+                </div>
+            </div>
+            <div class="entry">
+                <button class="entry-title">
+                    SAMPLE ENTRY TITLE 3
+                    <span class="dropdown-indicator">＋</span>
+                </button>
+                <div class="entry-details" style="display: none;">
+                    <p><strong>Author:</strong> Alice Johnson</p>
+                    <p><strong>Date:</strong> December 2, 2024</p>
+                    <p><strong>Keywords:</strong> Keyword5, Keyword6</p>
+                    <p><strong>Abstract:</strong> Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <button class="view-more">View More</button>
+                </div>
+            </div>
+            <div class="entry">
+                <button class="entry-title">
+                    SAMPLE ENTRY TITLE 4
+                    <span class="dropdown-indicator">＋</span>
+                </button>
+                <div class="entry-details" style="display: none;">
+                    <p><strong>Author:</strong> Bob Brown</p>
+                    <p><strong>Date:</strong> December 1, 2024</p>
+                    <p><strong>Keywords:</strong> Keyword7, Keyword8</p>
+                    <p><strong>Abstract:</strong> Duis aute irure dolor in reprehenderit in voluptate.</p>
+                    <button class="view-more">View More</button>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="prev-page">Previous</button>
+            <button class="next-page">Next</button>
+        </div>
+    </section>
+    
 
       <section class="announcements">
-        <h2>Announcements</h2>
-        <ul>
-          <li>
-            <strong>New Submission Guidelines</strong>: Please refer to the
-            updated submission rules on the Contribute Page.
-          </li>
-          <li>
-            <strong>System Maintenance</strong>: The repository will be down for
-            maintenance on December 10, 2024, from 10:00 AM to 2:00 PM.
-          </li>
-          <li>
-            <strong>New Research Materials</strong>: The repository has added
-            new research papers from the School of Medicine. Visit the
-            Contribute page for more details.
-          </li>
-        </ul>
+        <div class="announcements-background"></div>
+        <div class="announcements-content">
+          <h2>Announcements</h2>
+          <ul>
+            <li>
+              <strong>New Submission Guidelines</strong>: Please refer to the
+              updated submission rules on the Contribute Page.
+            </li>
+            <li>
+              <strong>System Maintenance</strong>: The repository will be down for
+              maintenance on December 10, 2024, from 10:00 AM to 2:00 PM.
+            </li>
+            <li>
+              <strong>New Research Materials</strong>: The repository has added
+              new research papers from the School of Medicine. Visit the
+              Contribute page for more details.
+            </li>
+          </ul>
+        </div>
       </section>
-
+    
+      
       <section class="contact">
-        <h2>Contact Information</h2>
-        <p>
-          If you have any questions or need assistance, feel free to reach out
-          to us:
-        </p>
-        <p>
-          Email:
-          <a href="mailto:repository@upm.edu.ph">repository@upm.edu.ph</a>
-        </p>
-        <p>Phone: (02) 1234-5678</p>
-        <p>
-          Address: University of the Philippines Manila, Taft Avenue, Manila,
-          Philippines
-        </p>
+  
+        <div class="contact-content">
+          <div class="contact-message">
+            <h2>Contact Information</h2>
+            <p>
+              If you have concerns about the UPM IRS or intend to contribute, 
+              please contact us at [designated email for UPM IRS] or [UPM IRS Website]. 
+              We encourage feedback, recommendations, and questions from all 
+              stakeholders. You may also visit us in our address: [insert address]. 
+              Thank you for accessing the UPM Institutional Repository System. 
+              Let's continue to cultivate an inclusive and accessible scholarly environment.
+            </p>
+          </div>
+          <div class="irs-location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15445.627776107467!2d120.9856936!3d14.5758725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb1b389af8e5%3A0xc7e7ed71c4d5ef62!2sUP%20Manila%20Library!5e0!3m2!1sen!2sph!4v1733388283300!5m2!1sen!2sph" 
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
       </section>
+      
 
       <section class="footer">
-        <p>&copy; 2024 UPM Institutional Repository. All rights reserved.</p>
+       <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/irs-logo-2.png" alt="Logo" />
+        </a>
+       </div>
+       <div class="footer-text"> 
+        <p>&copy; 2024 UP Manila Institutional Repository System
+        </p></div>
+      
       </section>
     </main>
 
     <script src="index.js"></script>
+    
+    
   </body>
 </html>
