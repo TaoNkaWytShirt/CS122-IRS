@@ -20,6 +20,7 @@
   width: 100%;
   max-width: 320px;
   margin: auto;
+  margin-top: 70px;
 }
 
 .irs-logo {
@@ -36,7 +37,8 @@
   margin: auto;
 }
 
-.login-form input {
+.login-form input,
+select {
   width: 100%;
   padding: 10px;
   margin: 10px 0;

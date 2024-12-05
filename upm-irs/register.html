@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPM IRS - Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="assets/irs-logo.png" alt="Logo" />
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="policies.html">Policies</a>
+        </nav>
+      </div>
+
+      <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Settings</a>
+          <a href="#">Account</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-container">
+      <div class="content">
+        <div class="login-form">
+          <div class="irs-logo">
+            <img src="assets/irs-logo-1.png" alt="UPM Building" />
+          </div>
+          <form>
+            <div>
+              <input type="text" placeholder="First Name" name="first_name" />
+              <input type="text" placeholder="Last Name" name="last_name" />
+              <input type="text" placeholder="Username" name="username" />
+              <input type="email" placeholder="Email" name="email" />
+              <select name="unit">
+                <option value="">---------</option>
+                <option value="unit1">Unit 1</option>
+                <option value="unit2">Unit 2</option>
+                <option value="unit3">Unit 3</option>
+              </select>
+              <select name="department">
+                <option value="">---------</option>
+                <option value="dept1">Department 1</option>
+                <option value="dept2">Department 2</option>
+                <option value="dept3">Department 3</option>
+              </select>
+              <input type="password" placeholder="Password" name="password" />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                name="confirm_password"
+              />
+            </div>
+            <button
+              class="google-signin"
+              style="background-color: #00573f; color: white"
+              onclick="window.location.href='login.html'"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
