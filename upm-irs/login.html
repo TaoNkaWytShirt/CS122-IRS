@@ -1,50 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UPM IRS - Login</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <img src="assets/logo-placeholder.png" alt="UPM IRS Logo">
-            <span>UPM IRS</span>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="assets/irs-logo.png" alt="Logo" />
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="policies.html">Policies</a>
+        </nav>
+      </div>
+
+      <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Settings</a>
+          <a href="#">Account</a>
+          <a href="#">Logout</a>
         </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Policies</a></li>
-        </ul>
-    </nav>
-    
-    <div class="container">
-        <div class="login-container">
-            <div class="hero-image">
-                <img src="assets/hero-placeholder.jpg" alt="UPM Building">
-            </div>
-            <div class="login-form">
-                <h1>Login</h1>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <input type="text" placeholder="Username" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <button type="submit" class="sign-in-btn">Sign In</button>
-                </form>
-                <div class="account-options">
-                    <p>No account? <a href="#" class="create-account">Create an account</a></p>
-                    <button class="google-signin">
-                        <img src="assets/google-icon-placeholder.png" alt="Google Icon">
-                        Sign in with Google
-                    </button>
-                </div>
-            </div>
+      </div>
+    </header>
+
+    <div class="content-container">
+      <div class="content">
+        <div class="login-form">
+          <div class="irs-logo">
+            <img src="assets/irs-logo-1.png" alt="UPM Building" />
+          </div>
+          <h1>Login</h1>
+          <form>
+            <input type="text" placeholder="Username" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit" class="sign-in-btn">Sign In</button>
+          </form>
+          <div class="account-options">
+            <p>
+              No account?
+              <a href="#" class="create-account">Create an account</a>
+            </p>
+            <button class="google-signin">
+              <img src="assets/google-icon-placeholder.png" alt="Google Icon" />
+              Sign in with Google
+            </button>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="content-container">
+      <div class=""content">
+      <div class="hero-image">
+        <img src="assets/hero-placeholder.jpg" alt="UPM Building" />
+      </div>
+      <div class="login-form">
+        <h1>Login</h1>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <input type="text" placeholder="Username" required />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" required />
+          </div>
+          <button type="submit" class="sign-in-btn">Sign In</button>
+        </form>
+        <div class="account-options">
+          <p>
+            No account?
+            <a href="#" class="create-account">Create an account</a>
+          </p>
+          <button class="google-signin">
+            <img src="assets/google-icon-placeholder.png" alt="Google Icon" />
+            Sign in with Google
+          </button>
+        </div>
+      </div>
     </div>
     <script src="assets/js/scripts.js"></script>
-</body>
+  </body>
+</html> -->
+  </body>
 </html>

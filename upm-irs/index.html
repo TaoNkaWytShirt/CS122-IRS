@@ -1,87 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPM Institutional Repository</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPM IRS - Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .welcome {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .parallax-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://www.upm.edu.ph/wp-content/themes/University%20of%20the%20Philippines%20Manila/images/home/carousel_images/1.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -1;
+      }
+
+      .parallax-background:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .content {
+        position: relative;
+        text-align: center;
+        color: white;
+        z-index: 2;
+        padding: 220px 20px;
+      }
+
+      .content h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        font-size: 1.2em;
+        line-height: 1.5;
+      }
+
+      #btnLearnMore {
+        background-color: #7b1113;
+        margin-top: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 1em;
+        color: #f5c94a;
+        border: 2px solid #f5c94a;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      #btnLearnMore:hover {
+        background-color: white;
+        color: #7b1113;
+        border-color: #7b1113;
+      }
+
+      section.services {
+        padding: 20px;
+        text-align: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+
+      .search-bar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        min-width: 300px;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+
+      .search-bar {
+        flex: 1;
+        max-width: 500px; /* Limits the maximum size of the search bar */
+        min-width: 200px; /* Ensures it doesn’t shrink below this size */
+        margin-right: 22px;
+      }
+
+      .input-box input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .filter-button,
+      .search-button {
+        width: 38px;
+        height: 38px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #7b1113;
+        color: white;
+        cursor: pointer;
+      }
+
+      .search-button {
+        background-image: url("assets/search-button.png"); /* Path to your icon*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40%; /* Resize icon to fit inside the button*/
+        color: transparent; /* Hides any text content*/
+      }
+
+      .filter-button {
+        background-image: url("assets/search-filter.png"); /* Path to your icon*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%; /* Resize icon to fit inside the button*/
+        color: transparent; /* Hides any text content*/
+      }
+
+      .filter-button:hover,
+      .search-button:hover {
+        background-color: #560001;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap; /* For responsiveness*/
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .buttons button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #7b1113;
+        color: white;
+        cursor: pointer;
+        width: 170px;
+        height: 180px;
+        text-align: center;
+        gap: 10px; /* Space between icon and text*/
+        font-size: 16px;
+      }
+
+      .buttons button:hover {
+        background-color: #560001;
+      }
+
+      .buttons button img {
+        width: 90px; /* Adjust size of the icon*/
+        height: 90px; /* Adjust size of the icon*/
+        object-fit: contain; /* Ensures the image scales correctly*/
+        pointer-events: none; /* Prevents hover effects on icons*/
+      }
+      /* Responsive Design*/
+      @media (max-width: 768px) {
+        .search-bar-container {
+          flex-direction: row;
+        }
+
+        .buttons {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <header>
+      <div class="header-content">
+        <img src="assets/irs-logo.png" alt="Logo" />
         <nav>
-            <a href="index.html">
-                <img src="assets/irs-logo.png" alt="UPM Logo" class="nav-logo">
-            </a>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="policies.html">Policies</a>
-            <div class="login">
-                <a href="login.html">Login</a>
-            </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="policies.html">Policies</a>
         </nav>
+      </div>
+
+      <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Settings</a>
+          <a href="#">Account</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section class="welcome">
-            <div class="parallax-background"></div>
-            <div class="content">
-                <h1>UP Manila Institutional Repository System</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button id="btnLearnMore">Learn More</button>
-            </div>
-        </section>
+      <section class="welcome">
+        <div class="parallax-background"></div>
+        <div class="content">
+          <h1>UP Manila Institutional Repository System</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <button id="btnLearnMore">Learn More</button>
+        </div>
+      </section>
 
-        <section class="services">
-            <div class="search-bar-container">
-                <button id="btnFilter" class="filter-button"></button>
-                <div class="search-bar">
-                    <form action="#">
-                        <div class="input-box">
-                            <input type="text" placeholder="Search..." required>
-                        </div>
-                    </form>
-                </div>
-                <button id="btnSearch" class="search-button"></button>
-            </div>
-            <div class="buttons">
-                <button id="btnAddContent"><img src="assets/add-content.png">Add Content</button>
-                <button id="btnRequests"><img src="assets/requests.png">Requests</button>
-                <button id="btnAdminPanel"><img src="assets/admin-panel.png">Admin Panel</button>
-                <button id="btnManuals"><img src="assets/manuals.png">Manuals</button>
-            </div>
-        </section>
-        
-        <section class="recent-submissions">
-            <h2>Recent Submissions</h2>
-            <ul>
-                <li><strong>New Submission Guidelines</strong>: Please refer to the updated submission rules on the Contribute Page.</li>
-                <li><strong>System Maintenance</strong>: The repository will be down for maintenance on December 10, 2024, from 10:00 AM to 2:00 PM.</li>
-                <li><strong>New Research Materials</strong>: The repository has added new research papers from the School of Medicine. Visit the Contribute page for more details.</li>
-            </ul>
-        </section>
+      <section class="services">
+        <div class="search-bar-container">
+          <button id="btnFilter" class="filter-button"></button>
+          <div class="search-bar">
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Search..." required />
+              </div>
+            </form>
+          </div>
+          <button id="btnSearch" class="search-button"></button>
+        </div>
+        <div class="buttons">
+          <button id="btnAddContent">
+            <img src="assets/add-content.png" />Add Content
+          </button>
+          <button id="btnRequests">
+            <img src="assets/requests.png" />Requests
+          </button>
+          <button id="btnAdminPanel">
+            <img src="assets/admin-panel.png" />Admin Panel
+          </button>
+          <button id="btnManuals">
+            <img src="assets/manuals.png" />Manuals
+          </button>
+        </div>
+      </section>
 
-        <section class="announcements">
-            <h2>Announcements</h2>
-            <ul>
-                <li><strong>New Submission Guidelines</strong>: Please refer to the updated submission rules on the Contribute Page.</li>
-                <li><strong>System Maintenance</strong>: The repository will be down for maintenance on December 10, 2024, from 10:00 AM to 2:00 PM.</li>
-                <li><strong>New Research Materials</strong>: The repository has added new research papers from the School of Medicine. Visit the Contribute page for more details.</li>
-            </ul>
-        </section>
+      <section class="recent-submissions">
+        <h2>Recent Submissions</h2>
+        <ul>
+          <li>
+            <strong>New Submission Guidelines</strong>: Please refer to the
+            updated submission rules on the Contribute Page.
+          </li>
+          <li>
+            <strong>System Maintenance</strong>: The repository will be down for
+            maintenance on December 10, 2024, from 10:00 AM to 2:00 PM.
+          </li>
+          <li>
+            <strong>New Research Materials</strong>: The repository has added
+            new research papers from the School of Medicine. Visit the
+            Contribute page for more details.
+          </li>
+        </ul>
+      </section>
 
-        <section class="contact">
-            <h2>Contact Information</h2>
-            <p>If you have any questions or need assistance, feel free to reach out to us:</p>
-            <p>Email: <a href="mailto:repository@upm.edu.ph">repository@upm.edu.ph</a></p>
-            <p>Phone: (02) 1234-5678</p>
-            <p>Address: University of the Philippines Manila, Taft Avenue, Manila, Philippines</p>
-        </section>
+      <section class="announcements">
+        <h2>Announcements</h2>
+        <ul>
+          <li>
+            <strong>New Submission Guidelines</strong>: Please refer to the
+            updated submission rules on the Contribute Page.
+          </li>
+          <li>
+            <strong>System Maintenance</strong>: The repository will be down for
+            maintenance on December 10, 2024, from 10:00 AM to 2:00 PM.
+          </li>
+          <li>
+            <strong>New Research Materials</strong>: The repository has added
+            new research papers from the School of Medicine. Visit the
+            Contribute page for more details.
+          </li>
+        </ul>
+      </section>
 
-        <section class="footer">
-            <p>&copy; 2024 UPM Institutional Repository. All rights reserved.</p>
-        </section>
+      <section class="contact">
+        <h2>Contact Information</h2>
+        <p>
+          If you have any questions or need assistance, feel free to reach out
+          to us:
+        </p>
+        <p>
+          Email:
+          <a href="mailto:repository@upm.edu.ph">repository@upm.edu.ph</a>
+        </p>
+        <p>Phone: (02) 1234-5678</p>
+        <p>
+          Address: University of the Philippines Manila, Taft Avenue, Manila,
+          Philippines
+        </p>
+      </section>
+
+      <section class="footer">
+        <p>&copy; 2024 UPM Institutional Repository. All rights reserved.</p>
+      </section>
     </main>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

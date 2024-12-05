@@ -1,4 +1,133 @@
 * {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "Header"
+    "Content";
+  min-height: 100vh;
+  background-color: #eaeaea;
+}
+
+header {
+  display: flex;
+  grid-area: Header;
+  background-color: #00573f;
+  padding: 3px 35px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-content img {
+  width: 100px;
+  height: 55px;
+  object-fit: contain;
+  margin: 0px 30px;
+}
+
+.header-content h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+.material-icons {
+  color: #fcfcfc;
+  margin: 0px 20px;
+  border: 1px solid transparent;
+}
+
+.material-icons:hover {
+  cursor: pointer;
+}
+
+.material-icons.active {
+  border: 1px solid #fcfcfc;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  z-index: 1;
+  border-radius: 5px;
+  right: 55px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  top: 48px;
+  padding: 10px 0px;
+}
+
+.dropdown-content a {
+  font-size: 14px;
+  color: black;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.content-container {
+  grid-area: Content;
+  position: fixed;
+  margin-top: 90px;
+  height: 100%;
+  width: 100%;
+  background-color: #eaeaea;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 50%;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 150px;
+  overflow-y: auto;
+}
+
+/**
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -152,8 +281,8 @@ nav ul li a {
 }
 
 header {
-    background-color: #7B1113; /* Deep green background */
-    padding: 0; /* Reduced padding for thinner appearance */
+    background-color: #7B1113; // Deep green background
+    padding: 0; // Reduced padding for thinner appearance
     width: 100%;
     top: 0;
     left: 0;
@@ -169,21 +298,21 @@ nav {
 }
 
 .nav-logo {
-    height: 35px; /* Slightly reduced logo size for a thinner navbar */
-    width: auto; /* Maintain the aspect ratio */
-    vertical-align: middle; /* Aligns the image with the navbar links */
-    margin-right: 10px; /* Adds spacing between the logo and the "Home" button */
-    pointer-events: none; /* Prevents hover effects on the logo */
+    height: 35px; // Slightly reduced logo size for a thinner navbar
+    width: auto; // Maintain the aspect ratio 
+    vertical-align: middle; // Aligns the image with the navbar links 
+    margin-right: 10px; // Adds spacing between the logo and the "Home" button 
+    pointer-events: none; // Prevents hover effects on the logo 
 }
 
 nav a {
     color: rgba(255, 255, 255, 0.765);
     text-decoration: none;
-    font-size: 15px; /* Slightly smaller font size for a compact appearance */
+    font-size: 15px; // Slightly smaller font size for a compact appearance 
     margin: 0;
-    padding: 5px 10px; /* Reduced padding for thinner nav items */
-    display: inline-block; /* Ensures padding applies to the whole area */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+    padding: 5px 10px; // Reduced padding for thinner nav items 
+    display: inline-block; // Ensures padding applies to the whole area 
+    transition: background-color 0.3s, color 0.3s; // Smooth transition effect 
 }
 
 nav a:hover {
@@ -191,13 +320,13 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color: #f5c94a; /* Highlighted background for the active link */
-    color: #7B1113; /* Contrast text color */
-    font-weight: bold; /* Optional: Make the text bold */
-    border-top: 5px solid #f5c94a; /* Top border in the same highlight color */
-    border-bottom: 5px solid #f5c94a; /* Bottom border in the same highlight color */
-    box-shadow: 0 3px 0 #f5c94a, 0 -3px 0 #f5c94a; /* Optional: Adds a shadow for more prominence */
-    padding: 5px 10px; /* Adjust padding to accommodate border size */
+    background-color: #f5c94a; // Highlighted background for the active link 
+    color: #7B1113; // Contrast text color 
+    font-weight: bold; // Optional: Make the text bold 
+    border-top: 5px solid #f5c94a; // Top border in the same highlight color 
+    border-bottom: 5px solid #f5c94a; // Bottom border in the same highlight color 
+    box-shadow: 0 3px 0 #f5c94a, 0 -3px 0 #f5c94a; // Optional: Adds a shadow for more prominence 
+    padding: 5px 10px; // Adjust padding to accommodate border size 
     transition: .3s;
 }
 
@@ -301,8 +430,8 @@ section.services {
 
 .search-bar {
     flex: 1;
-    max-width: 500px; /* Limits the maximum size of the search bar */
-    min-width: 200px; /* Ensures it doesn’t shrink below this size */
+    max-width: 500px; // Limits the maximum size of the search bar 
+    min-width: 200px; // Ensures it doesn’t shrink below this size 
     margin-right: 22px;
 }
 
@@ -325,19 +454,19 @@ section.services {
 }
 
 .search-button {
-    background-image: url('assets/search-button.png'); /* Path to your icon */
+    background-image: url('assets/search-button.png'); // Path to your icon 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 40%; /* Resize icon to fit inside the button */
-    color: transparent; /* Hides any text content */
+    background-size: 40%; // Resize icon to fit inside the button 
+    color: transparent; // Hides any text content 
 }
 
 .filter-button {
-    background-image: url('assets/search-filter.png'); /* Path to your icon */
+    background-image: url('assets/search-filter.png'); // Path to your icon 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 70%; /* Resize icon to fit inside the button */
-    color: transparent; /* Hides any text content */
+    background-size: 70%; // Resize icon to fit inside the button 
+    color: transparent; // Hides any text content 
 }
 
 .filter-button:hover, .search-button:hover {
@@ -348,7 +477,7 @@ section.services {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* For responsiveness */
+    flex-wrap: wrap; // For responsiveness 
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -369,7 +498,7 @@ section.services {
     width: 170px;
     height: 180px;
     text-align: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px; // Space between icon and text 
     font-size: 16px;
 }
 
@@ -378,12 +507,12 @@ section.services {
 }
 
 .buttons button img {
-    width: 90px; /* Adjust size of the icon */
-    height: 90px; /* Adjust size of the icon */
-    object-fit: contain; /* Ensures the image scales correctly */
-    pointer-events: none; /* Prevents hover effects on icons */
+    width: 90px; // Adjust size of the icon 
+    height: 90px; // Adjust size of the icon 
+    object-fit: contain; // Ensures the image scales correctly 
+    pointer-events: none; // Prevents hover effects on icons 
 }
-/* Responsive Design */
+// Responsive Design 
 @media (max-width: 768px) {
     .search-bar-container {
         flex-direction: row;
@@ -394,3 +523,5 @@ section.services {
         gap: 15px;
     }
 }
+
+**/ //

@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - UPM Repository</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPM IRS - About</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
+      <div class="header-content">
+        <img src="assets/irs-logo.png" alt="Logo" />
         <nav>
-            <a href="index.html">
-                <img src="assets/irs-logo.png" alt="UPM Logo" class="nav-logo">
-            </a>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="policies.html">Policies</a>
-            <div class="login">
-                <a href="login.html">Login</a>
-            </div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="policies.html">Policies</a>
         </nav>
+      </div>
+
+      <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Settings</a>
+          <a href="#">Account</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
     </header>
 
     <script>
-        function navigate(page) {
-            window.location.href = page;
-        }
+      function navigate(page) {
+        window.location.href = page;
+      }
     </script>
-</body>
+  </body>
 </html>
