@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPM IRS - About</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+      }
+
+      .content-container {
+        width: 100%;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+
+      /* Remove custom header styles and keep original */
+      header {
+        background-color: #006241;
+      }
+
+      .hero-section {
+        position: relative;
+        height: 400px;
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/placeholder-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        padding: 20px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .about-text {
+        padding: 40px;
+        text-align: justify;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        color: #333;
+      }
+
+      .key-features {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .key-features h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .feature-container {
+        display: flex;
+        align-items: flex-start;
+        background: white;
+        padding: 30px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .feature-container:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon {
+        font-size: 2em;
+        margin-right: 25px;
+        color: #00573f;
+        width: 50px;
+        text-align: center;
+        padding-top: 5px;
+      }
+
+      .feature-content {
+        flex: 1;
+      }
+
+      .feature-content h3 {
+        margin: 0 0 15px 0;
+        color: #00573f;
+        font-size: 1.4em;
+        font-weight: 600;
+      }
+
+      .feature-content p {
+        margin: 0;
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95em;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2em;
+        }
+        
+        .about-text {
+          padding: 20px;
+        }
+        
+        .key-features {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="index.html">
+          <img src="assets/irs-logo.png" alt="Logo" />
+        </a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="policies.html">Policies</a>
+        </nav>
+      </div>
+
+      <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Settings</a>
+          <a href="#">Account</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-container">
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>Advancing Spaces for Learning and Excellence</h1>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p>
+          At the heart of the university, the library serves as the repository
+          of knowledge, offering an array of services and resources to support
+          the scholarly endeavors of the whole academic and research community.
+          With the increasing number of research outputs across the institution,
+          the University Library, in collaboration with the UPM Digital
+          Transformation Project Team, developed an institutional repository, a
+          digital platform for preserving and utilizing an institution's
+          intellectual assets, particularly research outputs. The UPM
+          Institutional Repository System (UPM IRS) is an integrated platform
+          for collecting and disseminating the research outputs created by the
+          university's faculty members, staff, and researchers. It also extends
+          the reach of UPM's research outputs while ensuring long-term
+          preservation.
+        </p>
+      </div>
+
+      <div class="key-features">
+        <h2>KEY FEATURES</h2>
+        
+        <div class="feature-container">
+          <div class="feature-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Discovery and Retrieval</h3>
+            <p>
+              The UPM IRS provides extensive discovery and retrieval features
+              that let users quickly access relevant resources in our
+              collection. Accessibility to research outputs increases the
+              visibility and impact of the institution's intellectual work,
+              reaching a larger audience and encouraging more engagement with
+              the research.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-container">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Digital Preservation</h3>
+            <p>
+              The UPM IRS assures the long-term preservation of digital
+              materials, protecting the integrity and accessibility of scholarly
+              works for future generations.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-container">
+          <div class="feature-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Version Tracking</h3>
+            <p>
+              The UPM IRS uses version control systems to track changes and
+              updates to deposited content, preserving the accuracy and
+              reliability of the shared data.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-container">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Access Analytics</h3>
+            <p>
+              UPM IRS tracks usage statistics and analytics to assess the impact
+              and reach of the repository's content. Usage metrics such as
+              downloads, views, and citations contribute to evaluating the
+              research impact.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-container">
+          <div class="feature-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Compliance</h3>
+            <p>
+              The UPM IRS follows best practices and standards for digital
+              preservation and metadata management, guaranteeing adherence to
+              applicable policies and regulations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown() {
+        document.getElementById("dropdownMenu").classList.toggle("show");
+      }
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
