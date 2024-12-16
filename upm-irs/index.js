@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnRequests: "requests.html",
     btnAdminPanel: "admin-panel.html",
     btnManuals: "manuals.html",
-    btnLearnMore: "about.html",
+    btnLearnMore: "about2.html",
   };
 
   // Attach event listeners to buttons
