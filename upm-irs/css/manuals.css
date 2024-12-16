@@ -1,0 +1,78 @@
+.qr-message {
+    text-align: center;
+    padding-top: 100px;
+    background-color: #f9f9f9;
+}
+
+.qr-message h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #00573f;
+    margin-bottom: 10px;
+}
+
+.qr-message p {
+    font-size: 18px;
+    margin-top: 0;
+}
+.qr-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    width: 90%; 
+    max-width: 1200px; 
+  }
+  
+.qr-code {
+    flex: 1 1 calc(30% - 20px); 
+    max-width: 350px;
+    min-width: 150px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease-in-out;
+    background-color: white;
+}
+
+.qr-code img {
+    width: 100%; 
+    height: auto; 
+}
+
+.qr-label{
+    padding-top: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #00573f;
+}
+
+.qr-instruction{
+    padding-bottom: 20px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .qr-container {
+        gap: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .qr-code {
+        flex: 1 1 calc(80% - 10px); /* Take most of the width on smaller screens */
+    }
+}
