@@ -12,10 +12,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/homepage.css" />
-
-    
   </head>
   <body>
     <header>
@@ -211,7 +209,6 @@
       </section>
 
       <section class="footer">
-<<<<<<< HEAD
         <div class="footer-logo">
           <a href="index.html">
             <img src="assets/irs-logo-2.png" alt="Logo" />
@@ -220,67 +217,57 @@
         <div class="footer-text">
           <p>&copy; 2024 UP Manila Institutional Repository System</p>
         </div>
-=======
-       <div class="footer-logo">
-        <a href="index.html">
-          <img src="assets/irs-logo-2.png" alt="Logo" />
-        </a>
-       </div>
-       <div class="footer-text"> 
-        <p>&copy; 2024 UP Manila Institutional Repository System
-        </p></div>
->>>>>>> dbb99acd13db154456799ea0d859be2a12baa945
       </section>
       <!-- Filter Modal -->
-<div id="filterModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2>Apply Filters</h2>
-    
-    <label for="accessLevel">Access Level</label>
-    <select id="accessLevel">
-      <option value="all">All Access Levels</option>
-      <option value="public">Public</option>
-      <option value="university">University</option>
-      <option value="restricted">Restricted</option>
-    </select>
+      <div id="filterModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+          <h2>Apply Filters</h2>
 
-    <label for="content">Content Type</label>
-    <select id="content">
-      <option value="undergraduate-thesis">Undergraduate Thesis</option>
-      <option value="university-images">University Images</option>
-      <option value="fs-research-output">Faculty and Staff Research Output</option>
-      <option value="graduate-thesis">Graduate Thesis</option>
-      <option value="doctoral-dissertation">Doctoral Dissertation</option>
-      <option value="book">Book</option>
-      <option value="newsletter">Newsletter</option>
-      <option value="journal">Journal</option>
-    </select>
+          <label for="accessLevel">Access Level</label>
+          <select id="accessLevel">
+            <option value="all">All Access Levels</option>
+            <option value="public">Public</option>
+            <option value="university">University</option>
+            <option value="restricted">Restricted</option>
+          </select>
 
-    <label for="college">College</label>
-    <select id="college" onchange="updateDepartments()">
-      <option value="cas">College of Arts and Sciences</option>
-      <option value="cm">College of Medicine</option>
-      <option value="camp">College of Allied Medical Professions</option>
-      <option value="cd">College of Dentistry</option>
-      <option value="cn">College of Nursing</option>
-      <option value="cp">College of Pharmacy</option>
-      <option value="cph">College of Public Health</option>
-      <option value="shsp">School of Health Sciences Palo</option>
-      <option value="ul">University Library</option>
-    </select>
+          <label for="content">Content Type</label>
+          <select id="content">
+            <option value="undergraduate-thesis">Undergraduate Thesis</option>
+            <option value="university-images">University Images</option>
+            <option value="fs-research-output">
+              Faculty and Staff Research Output
+            </option>
+            <option value="graduate-thesis">Graduate Thesis</option>
+            <option value="doctoral-dissertation">Doctoral Dissertation</option>
+            <option value="book">Book</option>
+            <option value="newsletter">Newsletter</option>
+            <option value="journal">Journal</option>
+          </select>
 
-    <label for="department">Department</label>
-    <select id="department">
-    </select>
+          <label for="college">College</label>
+          <select id="college" onchange="updateDepartments()">
+            <option value="cas">College of Arts and Sciences</option>
+            <option value="cm">College of Medicine</option>
+            <option value="camp">College of Allied Medical Professions</option>
+            <option value="cd">College of Dentistry</option>
+            <option value="cn">College of Nursing</option>
+            <option value="cp">College of Pharmacy</option>
+            <option value="cph">College of Public Health</option>
+            <option value="shsp">School of Health Sciences Palo</option>
+            <option value="ul">University Library</option>
+          </select>
 
-    <div class="modal-buttons">
-      <button onclick="applyFilters()" class="apply-btn">Apply</button>
-      <button onclick="closeModal()" class="cancel-btn">Cancel</button>
-    </div>
-  </div>
-</div>
+          <label for="department">Department</label>
+          <select id="department"></select>
 
+          <div class="modal-buttons">
+            <button onclick="applyFilters()" class="apply-btn">Apply</button>
+            <button onclick="closeModal()" class="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="index.js"></script>
