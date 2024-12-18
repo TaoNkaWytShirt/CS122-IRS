@@ -84,8 +84,8 @@
 
   .search-bar {
     flex: 1;
-    max-width: 500px; /* Limits the maximum size of the search bar */
-    min-width: 200px; /* Ensures it doesn’t shrink below this size */
+    max-width: 500px; 
+    min-width: 200px; 
     margin-right: 22px;
   }
 
@@ -109,19 +109,19 @@
   }
 
   .search-button {
-    background-image: url("../assets/search-button.png"); /* Path to your icon*/
+    background-image: url("../assets/search-button.png"); 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 40%; /* Resize icon to fit inside the button*/
-    color: transparent; /* Hides any text content*/
+    background-size: 40%; 
+    color: transparent; 
   }
 
   .filter-button {
-    background-image: url("../assets/search-filter.png"); /* Path to your icon*/
+    background-image: url("../assets/search-filter.png"); 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 70%; /* Resize icon to fit inside the button*/
-    color: transparent; /* Hides any text content*/
+    background-size: 70%;
+    color: transparent; 
   }
 
   .filter-button:hover,
@@ -163,12 +163,11 @@
   }
 
   .buttons button img {
-    width: 90px; /* Adjust size of the icon*/
-    height: 90px; /* Adjust size of the icon*/
-    object-fit: contain; /* Ensures the image scales correctly*/
-    pointer-events: none; /* Prevents hover effects on icons*/
+    width: 90px; 
+    height: 90px; 
+    object-fit: contain; 
+    pointer-events: none;
   }
-  /* Responsive Design*/
   @media (max-width: 768px) {
     .search-bar-container {
       flex-direction: row;
@@ -407,8 +406,6 @@ border: 0;
 padding-right: 20px;
 }
 
-
-/* Modal Styling */
 .modal {
   display: none; 
   position: fixed;
@@ -445,10 +442,9 @@ padding-right: 20px;
   cursor: pointer;
 }
 
-/* Button Styling */
 .modal-buttons {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
+  justify-content: flex-end; 
   margin-top: 20px;
 }
 
@@ -459,7 +455,7 @@ padding-right: 20px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin-left: 10px; /* Space between buttons */
+  margin-left: 10px; 
 }
 
 .cancel-btn {
