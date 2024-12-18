@@ -1,0 +1,72 @@
+body {
+  padding-top: 90px; /* Adjust for fixed header */
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #00573f;
+}
+
+.section {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.section-header {
+  background-color: #00573f;
+  color: #fff;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f5c94a;
+  color: #000;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status-pending {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.pagination {
+  text-align: center;
+  padding: 15px;
+}
+
+.pagination button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #00573f;
+  color: white;
+}

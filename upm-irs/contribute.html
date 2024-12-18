@@ -13,183 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .content-container {
-        grid-area: Content;
-        position: fixed;
-        margin-top: 90px;
-        height: 100%;
-        width: 100%;
-        background-color: #eaeaea;
-        scroll-behavior: smooth;
-        overflow-y: auto;
-      }
-
-      .content {
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: 50%;
-        border: 1px solid #ccc;
-        padding: 10px;
-        border-radius: 7px;
-        margin-bottom: 150px;
-        overflow-y: auto;
-      }
-
-      input:not(.name input, .date input),
-      select {
-        height: 30px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        padding: 5px;
-      }
-
-      textarea {
-        display: flex;
-        height: 200px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        padding: 5px;
-        resize: none;
-      }
-
-      .details,
-      .title,
-      .content-type,
-      .keywords,
-      .access-level,
-      .abstract {
-        margin-bottom: 10px;
-      }
-
-      .details div,
-      .title div,
-      .content-type div,
-      .keywords div,
-      .access-level div,
-      .abstract div {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }
-
-      label {
-        margin-bottom: 5px;
-        margin-left: 3px;
-      }
-
-      .name,
-      .unit,
-      .date {
-        display: flex;
-        margin-bottom: 10px;
-        margin-top: 5px;
-      }
-
-      .name div,
-      .unit div,
-      .date div {
-        display: flex;
-        flex: 1;
-        min-width: 0;
-      }
-
-      .name input {
-        width: 100%;
-        box-sizing: border-box;
-        height: 30px;
-        border: solid #ccc;
-        border-width: 1px 0px 1px 1px;
-        padding: 5px;
-      }
-
-      .name input:nth-child(1),
-      .date input:nth-child(1) {
-        border-radius: 5px 0px 0px 5px;
-      }
-
-      .delete-row-btn {
-        width: 160px; /* Set button width to 70px */
-        height: 30px; /* Match input height */
-        border: none;
-        border-radius: 0px 5px 5px 0px;
-        background-color: #981610;
-        color: white;
-        box-sizing: border-box; /* Ensure padding/border don't affect width */
-        text-align: center;
-        line-height: 30px; /* Vertically align the minus symbol */
-        cursor: pointer;
-      }
-
-      .organization {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .organization label {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .add-row-btn {
-        width: 37px;
-        height: 30px;
-        border-radius: 5px;
-        background-color: #f4c430;
-        border: none;
-        cursor: pointer;
-      }
-
-      .unit {
-        display: flex;
-        vertical-align: middle;
-        gap: 10px;
-        margin-bottom: 15px;
-      }
-
-      .unit div {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-width: 0;
-      }
-
-      .date input {
-        width: 100%;
-        box-sizing: border-box;
-        height: 30px;
-        border: solid #ccc;
-        padding: 5px;
-      }
-
-      .date input:nth-child(1),
-      input:nth-child(2) {
-        border-width: 1px 0px 1px 1px;
-      }
-
-      .date input:nth-child(3) {
-        border-width: 1px;
-        border-radius: 0px 5px 5px 0px;
-      }
-
-      .embargo-duration {
-        display: flex;
-        vertical-align: middle;
-        gap: 10px;
-        margin-bottom: 15px;
-        margin-top: 5px;
-      }
-
-      .embargo-duration input {
-        width: 100%;
-        box-sizing: border-box;
-        height: 30px;
-        border: solid #ccc;
-        padding: 5px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/contribute.css" />
   </head>
   <body>
     <header>
@@ -216,10 +40,11 @@
     </header>
 
     <div class="content-container">
+      <h1>Contribute</h1>
       <div class="content">
         <div class="details">
           <div>
-            <label>Add Details</label>
+            <h2>Add Details</h2>
           </div>
         </div>
         <div class="title">
@@ -380,20 +205,20 @@
             <option value="University">Month</option>
           </select>
         </div>
+        <button class="footer-buttons">Cancel</button>
+        <button class="footer-buttons">Upload File</button>
       </div>
+      <section class="footer">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img src="assets/irs-logo-2.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="footer-text">
+          <p>&copy; 2024 UP Manila Institutional Repository System</p>
+        </div>
+      </section>
     </div>
-    <footer>
-      <div class="footer-container">
-        <p>&copy; 2024 UPM IRS. All rights reserved.</p>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="policies.html">Policies</a>
-        </nav>
-      </div>
-    </footer>
-    
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPM IRS - Content Tracker</title>
+    <!-- Fonts and Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/repository.css" />
+    <script>
+      function toggleDropdown() {
+        const dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <a href="index.html">
+          <img src="assets/irs-logo.png" alt="Logo" />
+        </a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="policies.html">Policies</a>
+        </nav>
+      </div>
+
+      <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Settings</a>
+          <a href="#">Account</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Tracker -->
+    <h1>Content Tracker</h1>
+
+    <!-- In Progress Section -->
+    <div class="section">
+      <div class="section-header">📋 In Progress</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date Submitted</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>lighq</td>
+            <td>Nov. 25, 2024, 5:27 p.m.</td>
+            <td><span class="status-pending">Pending</span></td>
+            <td><span class="material-icons">refresh</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button>&lt;</button>
+        <button>1</button>
+        <button>&gt;</button>
+      </div>
+    </div>
+
+    <!-- Approved Section -->
+    <div class="section">
+      <div class="section-header">✔ Approved</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date Submitted</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="3" style="text-align: center; color: grey">
+              No data available
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button>&lt;</button>
+        <button>1</button>
+        <button>&gt;</button>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/irs-logo-2.png" alt="Logo" />
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2024 UP Manila Institutional Repository System</p>
+      </div>
+    </section>
+  </body>
+</html>
