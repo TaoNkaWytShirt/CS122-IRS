@@ -10,9 +10,9 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/admin-panel.css"/>
   </head>
   <body>
     <header>
@@ -36,28 +36,57 @@
         </div>
       </div>
     </header>
-    <main>
-      <h1>Admin Panel</h1>
-      <h2>Content Tracker</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Date Submitted</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sample Title 1</td>
-            <td>2024-12-01</td>
-            <td>In Progress</td>
-            <td><button>Approve</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
+    <main class="admin-panel">
+      <h1 class="panel-title">Admin Panel</h1>
+
+      <div class="stats-grid">
+          <div class="stat-card">
+              <h2 class="stat-title">Contents</h2>
+              <div class="stat-number">3</div>
+              <a href="repository.html" class="stat-link">Repository →</a>
+          </div>
+          <div class="stat-card">
+              <h2 class="stat-title">Pending submissions</h2>
+              <div class="stat-number">4</div>
+              <a href="submissions.html" class="stat-link">Submissions →</a>
+          </div>
+      </div>
+
+      <div class="requests-card">
+          <div class="requests-grid">
+              <div>
+                  <h2 class="stat-title">Edit Requests</h2>
+                  <div class="stat-number">0</div>
+              </div>
+              <div>
+                  <h2 class="stat-title">Retract Requests</h2>
+                  <div class="stat-number">0</div>
+              </div>
+          </div>
+          <a href="requests.html" class="stat-link">Edit and Retract Requests →</a>
+      </div>
+
+      <div class="admin-buttons">
+          <a href="site-admin.html" class="admin-button">
+              <img src="assets/site-admin.png" alt="Settings icon">
+              <span class="admin-button-text">Site Admin</span>
+          </a>
+          <a href="user-management.html" class="admin-button">
+              <img src="assets/user-management.png" alt="User icon">
+              <span class="admin-button-text">User Management</span>
+          </a>
+      </div>
+  </main>
+  <section class="footer">
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="assets/irs-logo-2.png" alt="Logo" />
+      </a>
+    </div>
+    <div class="footer-text">
+      <p>&copy; 2024 UP Manila Institutional Repository System</p>
+    </div>
+  </section>
     <script src="index.js"></script>
   </body>
 </html>
