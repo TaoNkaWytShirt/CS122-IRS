@@ -1,0 +1,100 @@
+.admin-panel {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.panel-title {
+    color: #00573f;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.requests-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.admin-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    color: #00573f;
+    font-weight: bold;
+}
+
+.stat-link {
+    display: block;
+    background: #00573f;;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.stat-link:hover {
+    background: #003b2b;
+}
+
+.requests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.admin-button {
+    background: #00573f;
+    color: white;
+    text-decoration: none;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.admin-button:hover {
+    background: #003b2b;
+}
+
+.admin-button img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+.admin-button-text {
+    font-size: 1.2rem;
+}

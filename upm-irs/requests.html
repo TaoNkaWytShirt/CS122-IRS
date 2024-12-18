@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/requests.css" />
   </head>
   <body>
     <header>
@@ -38,45 +39,82 @@
     </header>
 
     <main>
-      <h1>Requests</h1>
-      <h2>Retract Requests</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Date Sent</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sample Title 1</td>
-            <td>2024-11-30</td>
-            <td><button>View</button></td>
-          </tr>
-          <!-- Additional rows -->
-        </tbody>
-      </table>
+      <section class="requests-section">
+        <h1>Requests</h1>
 
-      <h2>Edit Requests</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Date Sent</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sample Title 2</td>
-            <td>2024-12-01</td>
-            <td><button>Edit</button></td>
-          </tr>
-          <!-- Additional rows -->
-        </tbody>
-      </table>
+        <div class="table-container">
+          <h2>
+            <i class="material-icons trash-icon">delete</i> Retract Requests
+          </h2>
+          <table class="requests-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Date Sent</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sample Request 1</td>
+                <td>2024-12-01</td>
+                <td>
+                  <button class="action-btn accept-btn">Accept</button>
+                  <button class="action-btn refuse-btn">Refuse</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Sample Request 2</td>
+                <td>2024-12-05</td>
+                <td>
+                  <button class="action-btn accept-btn">Accept</button>
+                  <button class="action-btn refuse-btn">Refuse</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-container">
+          <h2>
+            <i class="material-icons edit-icon">edit</i> Edit Requests
+          </h2>
+          <table class="requests-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Date Sent</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sample Request 3</td>
+                <td>2024-12-02</td>
+                <td><button class="action-btn accept-btn">View</button></td>
+              </tr>
+              <tr>
+                <td>Sample Request 4</td>
+                <td>2024-12-06</td>
+                <td><button class="action-btn accept-btn">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
+
+    <section class="footer">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/irs-logo-2.png" alt="Logo" />
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2024 UP Manila Institutional Repository System</p>
+      </div>
+    </section>
+
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,47 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPM IRS - Policies</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/policies.css">
+</head>
+<body>
     <header>
-      <div class="header-content">
-        <a href="index.html">
-          <img src="assets/irs-logo.png" alt="Logo" />
-        </a>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="policies.html">Policies</a>
-        </nav>
-      </div>
-
-      <div class="profile">
-        <i class="material-icons" onclick="toggleDropdown()">person</i>
-        <div class="dropdown-content" id="dropdownMenu">
-          <a href="#">Settings</a>
-          <a href="#">Account</a>
-          <a href="login.html">Logout</a>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="assets/irs-logo.png" alt="Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="policies.html">Policies</a>
+            </nav>
         </div>
-      </div>
+
+        <div class="profile">
+            <i class="material-icons" onclick="toggleDropdown()">person</i>
+            <div class="dropdown-content" id="dropdownMenu">
+                <a href="#">Settings</a>
+                <a href="#">Account</a>
+                <a href="login.html">Logout</a>
+            </div>
+        </div>
     </header>
 
+    <main>
+        <section class="policies-content">
+            <h1>Policies</h1>
+
+            <article>
+                <h2>Withdrawal and Retention Policy</h2>
+                
+                <ol>
+                  <li>Items will be retained indefinitely, and we will try to ensure continued readability and accessibility.</li>
+                    <li>Regularly back up its files according to current best practice.</li>
+                    <li>A persistent URL will be created after an item is deposited in the repository. It will always link to the object and/or the metadata associated with it.</li>
+                    <li>Contributors and/or copyright holders may request the removal of their items after submission. No items will be removed by IR administrators without contributors' consent after the items have been deposited.</li>
+                    <li>If evidence of a copyright violation is received by the IR administrator, the related item will be removed immediately. Reasons for removal of deposited content may include:</li>
+                <ul>
+                    <li>Copyright infringement</li>
+                    <li>Plagiarism</li>
+                    <li>Falsification of data</li>
+                </ul>
+                </ol>
+            </article>
+
+            <article>
+                <h2>Access and Use Policy</h2>
+                <ol>
+                  <li>Anyone within the UPM may access the contents free of charge.</li>
+                  <li>Contents must be acknowledged with proper citation. Link to digital content in UPM Digital Knowledge Hub can be used without asking permission.</li>
+                  <li>UPM Digital Knowledge Hub does not have authority to grant or deny permissions, as copyright remains with the authors.</li>
+                  <li>Contents may be used for personal research or analysis, educational, or non-profit purposes without prior permission or charge, as long as the content is not altered in any way.</li>
+                  <li>Some contents are individually tagged with different rights permissions and conditions.</li>
+                </ol>
+            </article>
+
+            <article>
+                <h2>Privacy Policy</h2>
+                <h3>Platform User</h3>
+                <p>Certain information is collected and processed whenever a user utilizes the UPM Digital Knowledge Hub. When you use the repository, the following information is collected and stored:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Email address</li>
+                    <li>Internet domain and IP address</li>
+                    <li>Date and time</li>
+                </ul>
+                <p>This information is only used internally for technological troubleshooting, and usage statistics.</p>
+
+                <h3>Contributor</h3>
+                <p>Personal information of the contributor is collected by the system during the deposit process on the repository. The information provided is solely for documentation and statistics. This information is not shared with third parties, nor is it allowed to be used for commercial purposes by the library. When you deposit content on the repository, the following information will be collected and stored:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>College/Unit/Department</li>
+                    <li>UP email</li>
+                    <li>Contact number (optional)</li>
+                </ul>
+                <p>UPM Digital Knowledge Hub is committed to safeguarding the privacy of its users and contributors. 
+                  It strictly adheres to <a href="https://privacy.gov.ph/data-privacy-act/" target="_blank">Republic Act 10912 (Data Privacy Act of 2012)</a> and applies the same 
+                  requirements and restrictions of the University of the Philippines System's <a href="https://drive.google.com/file/d/1ZC55V8mdh96xtc0EhU-oHi28v9oE4LRH/view" target="_blank">Approved Acceptable Use Policy for Information Technology (IT) Resources and Privacy Policy.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/irs-logo-2.png" alt="Logo" />
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2024 UP Manila Institutional Repository System</p>
+      </div>
+    </footer>
+
     <script>
-      function navigate(page) {
-        window.location.href = page;
-      }
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
     </script>
-    <script src="index.js"></script>
-  </body>
+</body>
 </html>
