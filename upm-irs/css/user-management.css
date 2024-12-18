@@ -1,0 +1,105 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #00573f;
+  margin: 20px 0;
+}
+
+.section {
+  background-color: white;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.section-header {
+  background-color: #00573f;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f5c94a;
+  color: #00573f;
+}
+
+.status-active {
+  color: green;
+  font-weight: bold;
+}
+
+.status-inactive {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  background-color: #00573f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #981610;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.pagination button {
+  background-color: #f4f4f4;
+  color: #00573f;
+  border: 1px solid #ddd;
+}
+
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.add-user-form label {
+  margin-bottom: 5px;
+  color: #00573f;
+}
+
+.add-user-form input,
+.add-user-form select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-user-form button {
+  align-self: flex-start;
+  margin-top: 10px;
+}

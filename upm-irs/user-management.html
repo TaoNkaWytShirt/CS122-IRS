@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPM IRS - User Management</title>
+    <!-- Fonts and Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/user-management.css" />
+    <script>
+      function toggleDropdown() {
+        const dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <a href="index.html">
+          <img src="assets/irs-logo.png" alt="Logo" />
+        </a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="policies.html">Policies</a>
+        </nav>
+      </div>
+
+      <div class="profile">
+        <i class="material-icons" onclick="toggleDropdown()">person</i>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Settings</a>
+          <a href="#">Account</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- User Management -->
+    <h1>User Management</h1>
+
+    <!-- Users Section -->
+    <div class="section">
+      <div class="section-header">👥 Users</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jane Doe</td>
+            <td>jane.doe@example.com</td>
+            <td>Admin</td>
+            <td><span class="status-active">Active</span></td>
+            <td>
+              <button>Edit</button>
+              <button class="delete-button">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>John Smith</td>
+            <td>john.smith@example.com</td>
+            <td>User</td>
+            <td><span class="status-inactive">Inactive</span></td>
+            <td>
+              <button>Edit</button>
+              <button class="delete-button">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button>&lt;</button>
+        <button>1</button>
+        <button>&gt;</button>
+      </div>
+    </div>
+
+    <!-- Add User Section -->
+    <div class="section">
+      <div class="section-header">➕ Add New User</div>
+      <form action="#" method="POST" class="add-user-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="role">Role:</label>
+        <select id="role" name="role">
+          <option value="User">User</option>
+          <option value="Admin">Admin</option>
+        </select>
+
+        <button type="submit">Add User</button>
+      </form>
+    </div>
+
+    <section class="footer">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/irs-logo-2.png" alt="Logo" />
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2024 UP Manila Institutional Repository System</p>
+      </div>
+    </section>
+  </body>
+</html>
