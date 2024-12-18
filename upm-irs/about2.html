@@ -35,7 +35,7 @@
         background-color: #006241;
       }
 
-      .hero-section {
+      .headerPic-section {
         position: relative;
         height: 400px;
         color: white;
@@ -49,12 +49,12 @@
         margin: 0;
       }
 
-      .hero-content {
+      .headerPic-content {
         max-width: 800px;
         padding: 20px;
       }
 
-      .hero-content h1 {
+      .headerPic-content h1 {
         font-size: 2.5em;
         margin-bottom: 20px;
         font-weight: 600;
@@ -126,8 +126,62 @@
         font-size: 0.95em;
       }
 
+      .accordion {
+        margin-bottom: 20px;
+      }
+
+      .accordion-button {
+        background-color: #00573f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .accordion-button.active {
+        background-color: #006241;
+      }
+
+      .accordion-content {
+        padding: 20px;
+        display: none;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .feature-item {
+        margin-bottom: 20px;
+      }
+
+      .get-involved-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .cta-button {
+        background-color: #00573f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+
       @media (max-width: 768px) {
-        .hero-content h1 {
+        .headerPic-content h1 {
           font-size: 2em;
         }
         
@@ -189,83 +243,98 @@
         </p>
       </div>
 
-      <div class="key-features">
-        <h2>KEY FEATURES</h2>
-        
-        <div class="feature-container">
-          <div class="feature-icon">
-            <i class="fas fa-search"></i>
+      <div class="accordion">
+        <button class="accordion-button active">Key Features <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <div class="feature-container">
+            <div class="feature-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Discovery and Retrieval</h3>
+              <p>The UPM IRS provides extensive discovery and retrieval features that let users quickly access relevant resources in our collection. Accessibility to research outputs increases the visibility and impact of the institution's intellectual work, reaching a larger audience and encouraging more engagement with the research.</p>
+            </div>
           </div>
-          <div class="feature-content">
-            <h3>Discovery and Retrieval</h3>
-            <p>
-              The UPM IRS provides extensive discovery and retrieval features
-              that let users quickly access relevant resources in our
-              collection. Accessibility to research outputs increases the
-              visibility and impact of the institution's intellectual work,
-              reaching a larger audience and encouraging more engagement with
-              the research.
-            </p>
-          </div>
-        </div>
 
-        <div class="feature-container">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
+          <div class="feature-container">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Digital Preservation</h3>
+              <p>The UPM IRS assures the long-term preservation of digital materials, protecting the integrity and accessibility of scholarly works for future generations.</p>
+            </div>
           </div>
-          <div class="feature-content">
-            <h3>Digital Preservation</h3>
-            <p>
-              The UPM IRS assures the long-term preservation of digital
-              materials, protecting the integrity and accessibility of scholarly
-              works for future generations.
-            </p>
-          </div>
-        </div>
 
-        <div class="feature-container">
-          <div class="feature-icon">
-            <i class="fas fa-code-branch"></i>
+          <div class="feature-container">
+            <div class="feature-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Version Tracking</h3>
+              <p>The UPM IRS uses version control systems to track changes and updates to deposited content, preserving the accuracy and reliability of the shared data.</p>
+            </div>
           </div>
-          <div class="feature-content">
-            <h3>Version Tracking</h3>
-            <p>
-              The UPM IRS uses version control systems to track changes and
-              updates to deposited content, preserving the accuracy and
-              reliability of the shared data.
-            </p>
-          </div>
-        </div>
 
-        <div class="feature-container">
-          <div class="feature-icon">
-            <i class="fas fa-chart-line"></i>
+          <div class="feature-container">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Access Analytics</h3>
+              <p>UPM IRS tracks usage statistics and analytics to assess the impact and reach of the repository's content. Usage metrics such as downloads, views, and citations contribute to evaluating the repository's effectiveness in promoting research dissemination and knowledge exchange.</p>
+            </div>
           </div>
-          <div class="feature-content">
-            <h3>Access Analytics</h3>
-            <p>
-              UPM IRS tracks usage statistics and analytics to assess the impact
-              and reach of the repository's content. Usage metrics such as
-              downloads, views, and citations contribute to evaluating the
-              research impact.
-            </p>
-          </div>
-        </div>
 
-        <div class="feature-container">
-          <div class="feature-icon">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="feature-content">
-            <h3>Compliance</h3>
-            <p>
-              The UPM IRS follows best practices and standards for digital
-              preservation and metadata management, guaranteeing adherence to
-              applicable policies and regulations.
-            </p>
+          <div class="feature-container">
+            <div class="feature-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Compliance</h3>
+              <p>The UPM IRS follows best practices and standards for digital preservation and metadata management, guaranteeing adherence to applicable policies and regulations.</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="accordion">
+        <button class="accordion-button">Get Involved <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>We encourage faculty, staff, students, and researchers to contribute actively to our scholarly repository system. It broadens the reach and impact of the repository and ensures wide dissemination of the research output across the academic and research community.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-button">Contact Information <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <p>If you have concerns about the UPM IRS or intend to contribute, please contact us at <a href="mailto:designated-email@upm.edu">designated-email@upm.edu</a> or visit our <a href="http://upm-irs-website.com">UPM IRS Website</a>. We encourage feedback, recommendations, and questions from all stakeholders. Thank you for accessing the UPM Institutional Repository System. Let's continue to cultivate an inclusive and accessible scholarly environment.</p>
+        </div>
+      </div>
+
+      <script>
+        // Get all accordion buttons
+        var accordions = document.getElementsByClassName("accordion-button");
+
+        // Loop through the buttons and add click event listeners
+        for (let i = 0; i < accordions.length; i++) {
+          accordions[i].onclick = function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.querySelector("i").classList.remove("fa-chevron-up");
+              this.querySelector("i").classList.add("fa-chevron-down");
+            } else {
+              content.style.display = "block";
+              this.querySelector("i").classList.remove("fa-chevron-down");
+              this.querySelector("i").classList.add("fa-chevron-up");
+            }
+          }
+        }
+
+        // Removed automatic opening of the Key Features section
+      </script>
     </div>
 
     <script>

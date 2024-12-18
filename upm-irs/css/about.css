@@ -37,6 +37,19 @@
     color: #333;
 }
 
+.get-involved-content {
+    padding: 60px;
+    text-align: justify;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #333;
+}
+
+.get-involved-content p {
+    margin: 20px 0;
+}
+
 .key-features {
     padding: 40px;
     max-width: 1200px;
@@ -76,12 +89,21 @@
     font-size: 0.95em;
 }
 
+.accordion-content {
+    padding: 40px; /* Increase padding for more space */
+    margin: 10px; /* Add margin to prevent content from touching edges */
+}
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2em;
     }
     
     .about-text {
+        padding: 20px;
+    }
+    
+    .get-involved-content {
         padding: 20px;
     }
     
