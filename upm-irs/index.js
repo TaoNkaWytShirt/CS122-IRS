@@ -44,6 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(`Redirecting to page for Entry ${index + 1}`);
     });
   });
+
+  // Apply button popup
+  const applyButtons = document.querySelectorAll('.apply-btn');
+  applyButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPopup('Filters applied successfully.', 'success');
+    });
+  });
 });
 
 function toggleDropdown() {
@@ -121,4 +130,39 @@ function openModal() {
   
   // Trigger filter modal on button click
   document.getElementById("btnFilter").addEventListener("click", openModal);
-  
+
+// Create and show popup
+function showPopup(message, type = 'info') {
+  // Remove any existing popups
+  const existingPopup = document.getElementById('popup-message');
+  if (existingPopup) {
+    existingPopup.remove();
+  }
+
+  // Create popup element
+  const popup = document.createElement('div');
+  popup.id = 'popup-message';
+  popup.className = `popup ${type}`;
+  popup.innerHTML = `
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <p>${message}</p>
+    </div>
+  `;
+
+  // Add to body
+  document.body.appendChild(popup);
+
+  // Close button functionality
+  const closeBtn = popup.querySelector('.popup-close');
+  closeBtn.addEventListener('click', () => {
+    popup.remove();
+  });
+
+  // Auto-remove after 5 seconds
+  setTimeout(() => {
+    if (document.getElementById('popup-message')) {
+      popup.remove();
+    }
+  }, 5000);
+}
